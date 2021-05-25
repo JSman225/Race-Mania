@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Race Mania</title>
+    <link rel="icon" HREF="../game_imgs/RM.png" </head>
+
+  <body onload="start()">
+
+    <canvas id="myCanvas" width="1366" height="657" class="screen"></canvas>
+    <img draggable="false" id="car" style="display:none;">
+    <img draggable="false" id="car1" style="display:none;">
+
+
+
+    <img draggable="false" src="../game_imgs/track.png" id="track" style="display:none;">
+    <img draggable="false" src="../game_imgs/track1.png" id="track1" style="display:none;">
+    <img draggable="false" src="../game_imgs/track2.png" id="track2" style="display:none;">
+    <img draggable="false" src="../game_imgs/track3.png" id="track3" style="display:none;">
+    <img draggable="false" src="../game_imgs/start_screen.png" class="start" id="start_screen">
+    <h2 id="start" style="font-family: Calibri; text-align:center; position:absolute; left: 29%; top: 29%; font-size: 40px;color: #fff;">- CHOOSE YOUR CARS - <br> - THEN YOUR TRACK -<br><span id="spacebar">- THEN PRESS SPACEBAR TO START -</span></h2>
+
+    <h3 id="player2box" style="font-family: Calibri; border-radius:15px; height:450px; width:250px; background-color:grey; position:absolute; right:-10px; top:-10px; margin:0px; color:grey; text-align:right; padding-right:20px; font-size: 35px;">:)</h3>
+
+    <h3 id="player2" style="font-family: Calibri; text-align:center; position:absolute; right:3%; top:45%; color: #ff0; font-size: 35px;">PLAYER 2<br><span id="p2t"></span><br></h3>
+
+
+
+    <h3 id="player1box" style="font-family: Calibri; border-radius:15px; height:450px; width:250px; background-color:grey; position:absolute; left:-10px; top:-10px; margin:0px; color:grey; padding-left:20px; font-size: 35px;">:)</h3>
+
+
+
+    <h3 id="player1" style="font-family: Calibri; text-align:center; position:absolute; left:3%; top:45%; color: #ff0; font-size: 35px;">PLAYER 1<br><span id="p1t"></span></h3>
+
+    <img draggable="false" src="../game_imgs/start_screen.png" height="150" width="150" class="preview" id="preview">
+    <img draggable="false" src="../game_imgs/start_screen.png" height="150" width="150" class="preview1" id="preview1">
+
+    <div id="square" class="square"></div>
+    <img draggable="false" src="../game_imgs/delta.png" id="delta" class="delta" height="50" width="50">
+    <h1 class="delta_name" id="delta_name">DELTASOFT - 2021</h1>
+
+    <button id="car1R" onclick="car1R()" class="car1"><img draggable="false" width="100" height="100" src="../game_imgs/car_right.png"></button>
+    <button id="car1Y" onclick="car1Y()" class="car2"><img draggable="false" width="100" height="100" src="../game_imgs/car_right1.png"></button>
+    <button id="car1G" onclick="car1G()" class="car3"><img draggable="false" width="100" height="100" src="../game_imgs/car_right2.png"></button>
+
+    <button id="car2R" onclick="car2R()" class="car1R"><img draggable="false" width="100" height="100" src="../game_imgs/car_left.png"></button>
+    <button id="car2Y" onclick="car2Y()" class="car2R"><img draggable="false" width="100" height="100" src="../game_imgs/car_left1.png"></button>
+    <button id="car2G" onclick="car2G()" class="car3R"><img draggable="false" width="100" height="100" src="../game_imgs/car_left2.png"></button>
+
+    <img draggable="false" src="../game_imgs/red.png" id="stoplight" class="stoplight">
+    <img draggable="false" src="../game_imgs/Race Mania.png" id="RM" class="imgRM">
+
+
+    <button draggable="false" onclick="location.reload()" id="restart" class="ra"><b><i>Race Again!</i></b></button>
+    <button id="setST1" onclick="setST1()" class="t1">Track 1<br><img draggable="false" src="../game_imgs/track.png"></button>
+    <button id="setST2" onclick="setST2()" class="t2">Track 2<br><img draggable="false" src="../game_imgs/track1.png"></button>
+    <button id="setST3" onclick="setST3()" class="t3">Track 3<br><img draggable="false" src="../game_imgs/track2.png"></button>
+    <button id="setST4" onclick="setST4()" class="t4">Track 4<br><img draggable="false" src="../game_imgs/track3.png"></button>
+
+    <div id="pauseMenu" class="pauseMenu">
+      <h1>Pause Menu</h1>
+      <button onclick="restartGame()" class="restart">Restart</button>
+      <button onclick="noneWin()" class="restart">Quit</button>
+      <button onclick="document.getElementById('pauseMenu').style.display='none'; canMove=true;" class="restart">Continue Game</button>
+    </div>
+    <link rel="stylesheet" href="CSS.css">
+    <script src="JS.js"></script>
+
+  </body>
+  <audio id="myAudio">
+
+    <source src="audio_files/Bellwave - Key of E.mp3" type="audio/mpeg">
+
+  </audio>
+
+</html>

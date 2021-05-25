@@ -1,0 +1,314 @@
+@font-face {
+  font-family: Calibri;
+  src: url('../game_fonts/Calibri.ttf');
+}
+
+body {
+  overflow: hidden;
+  /* Hide scrollbars */
+}
+
+canvas {
+  font-family: Calibri;
+
+  cursor: url('bb.png'), auto;
+
+}
+
+.screen {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.start {
+  width: 1366px;
+  height: 657px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+
+.car1 {
+  position: absolute;
+  top: 0px;
+  background-color: grey;
+  border: none;
+  outline: none;
+  border-radius: 35px;
+  transition: all 1s;
+}
+
+.car1:hover {
+  border-radius: 45px;
+  background-color: red;
+}
+
+.car2 {
+  position: absolute;
+  top: 110px;
+  background-color: grey;
+  border: none;
+  outline: none;
+  border-radius: 35px;
+  transition: all 1s;
+}
+
+.car2:hover {
+  border-radius: 45px;
+  background-color: yellow;
+}
+
+.car3 {
+  position: absolute;
+  top: 220px;
+  background-color: grey;
+  border: none;
+  outline: none;
+  border-radius: 35px;
+  transition: all 1s;
+}
+
+.car3:hover {
+  border-radius: 45px;
+  background-color: green;
+}
+
+.car1R {
+  position: absolute;
+  top: 0px;
+  background-color: grey;
+  border: none;
+  right: 5px;
+  outline: none;
+  border-radius: 35px;
+  transition: all 1s;
+}
+
+.car1R:hover {
+  border-radius: 45px;
+  background-color: red;
+}
+
+.car2R {
+  position: absolute;
+  top: 110px;
+  background-color: grey;
+  border: none;
+  right: 5px;
+  outline: none;
+  border-radius: 35px;
+  transition: all 1s;
+}
+
+.car2R:hover {
+  border-radius: 45px;
+  background-color: yellow;
+}
+
+.car3R {
+  position: absolute;
+  top: 220px;
+  background-color: grey;
+  border: none;
+  right: 5px;
+  outline: none;
+  border-radius: 35px;
+  transition: all 1s;
+}
+
+.car3R:hover {
+  border-radius: 45px;
+  background-color: green;
+}
+
+.preview {
+  position: absolute;
+  top: 50px;
+  left: 300px;
+  border: none;
+}
+
+.preview1 {
+  position: absolute;
+  top: 50px;
+  right: 300px;
+  border: none;
+}
+
+.delta {
+  position: absolute;
+  bottom: 5px;
+  left: 2px;
+}
+
+.delta_name {
+  position: absolute;
+  bottom: 5px;
+  left: 60px;
+  color: #fff;
+  font-size: 35px;
+  font-family: Calibri;
+  margin: 0px;
+}
+
+.square {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  height: 70px;
+  width: 330px;
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.stoplight {
+  position: absolute;
+  height: 310px;
+  width: 200px;
+  left: 40%;
+  top: 110px;
+  display: none;
+}
+
+.imgRM {
+  position: absolute;
+  left: 27.4%;
+  top: 7%;
+  display: block;
+  width: 48%;
+}
+
+.ra {
+  position: absolute;
+  top: 60%;
+  left: 21%;
+  width: 800px;
+  height: 75px;
+  border-radius: 30px;
+  font-size: 40px;
+  background-color: skyblue;
+  color: #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  outline: none;
+  display: none;
+}
+
+.t1 {
+  position: absolute;
+  bottom: 15%;
+  left: 265px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  color: yellow;
+  background-color: grey;
+  font-family: Calibri;
+  font-size: 30px;
+  border-radius: 15px;
+  transition: all 0.5s;
+  border: none;
+}
+
+.t1:active {
+  border-radius: 30px;
+  background-color: red;
+}
+
+.t2:active {
+  border-radius: 30px;
+  background-color: red;
+}
+
+.t3:active {
+  border-radius: 30px;
+  background-color: red;
+}
+
+.t4:active {
+  border-radius: 30px;
+  background-color: red;
+}
+
+.t2 {
+  position: absolute;
+  left: 476px;
+  bottom: 15%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  color: yellow;
+  background-color: grey;
+  font-family: Calibri;
+  font-size: 30px;
+  border-radius: 15px;
+  transition: all 0.5s;
+  border: none;
+}
+
+.t3 {
+  position: absolute;
+  right: 476px;
+  bottom: 15%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  color: yellow;
+  background-color: grey;
+  font-family: Calibri;
+  font-size: 30px;
+  border-radius: 15px;
+  transition: all 0.5s;
+  border: none;
+}
+
+.t4 {
+  position: absolute;
+  right: 265px;
+  bottom: 15%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  color: yellow;
+  background-color: grey;
+  font-family: Calibri;
+  font-size: 30px;
+  border-radius: 15px;
+  transition: all 0.5s;
+  border: none;
+}
+
+.pauseMenu {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: grey;
+  color: #fff;
+  font-family: Calibri;
+  width: 500px;
+  height: 600px;
+  top: 30px;
+
+  display: none;
+}
+
+.restart {
+  width: 300px;
+  height: 60px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  font-size: 30px;
+  background-color: skyblue;
+  color: #f00;
+  outline: none;
+  border: none;
+}
